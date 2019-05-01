@@ -1,9 +1,10 @@
 <form id="form" action="/signup" method="POST">
   <label for="username">Username</label><br>
-  <input type="text" name="username" placeholder="Your username">
+  {{!-- Below rejects signup attempt if it is below a certain number of characters. --}}
+  <input type="text" name="username" placeholder="Your username" required='true' minlength="3">
 
   <label for="password">Password</label><br>
-  <input type="password" name="password" placeholder="********">
+  <input type="password" id="myPassword" name="password" placeholder="********" required='true' minlength="3">
 
   <button type="submit">Create account</button>
 </form>
